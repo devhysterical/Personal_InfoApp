@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Hình ảnh đại diện -->
     <ImageView
         android:id="@+id/imageViewProfile"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"
+        tools:ignore="ContentDescription" />
 
+    <!-- Tiêu đề -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,6 +24,7 @@
         android:layout_marginTop="16dp"
         android:layout_gravity="center" />
 
+    <!-- Trường nhập Họ và Tên -->
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
@@ -29,6 +34,7 @@
         android:padding="12dp"
         android:minHeight="48dp" />
 
+    <!-- Trường nhập Email -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
@@ -38,6 +44,7 @@
         android:padding="12dp"
         android:minHeight="48dp" />
 
+    <!-- Trường nhập Số điện thoại -->
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="match_parent"
@@ -47,6 +54,7 @@
         android:padding="12dp"
         android:minHeight="48dp" />
 
+    <!-- Giới tính -->
     <RadioGroup
         android:id="@+id/radioGroupGender"
         android:layout_width="match_parent"
@@ -72,6 +80,7 @@
             android:text="Khác" />
     </RadioGroup>
 
+    <!-- Điều khoản sử dụng -->
     <CheckBox
         android:id="@+id/checkBoxTerms"
         android:layout_width="wrap_content"
@@ -79,6 +88,7 @@
         android:text="Tôi đồng ý với điều khoản sử dụng"
         android:layout_marginTop="8dp" />
 
+    <!-- Nút Lưu -->
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="match_parent"
@@ -86,6 +96,7 @@
         android:text="Lưu"
         android:layout_marginTop="16dp" />
 
+    <!-- RecyclerView để hiển thị danh sách thông tin -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
